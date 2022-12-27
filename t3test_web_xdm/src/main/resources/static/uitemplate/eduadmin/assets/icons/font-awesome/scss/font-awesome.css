@@ -1,0 +1,18 @@
+/* Error: Undefined operation "2em * fa-divide(5, 4)".
+ *    ,
+ * 37 | $fa-li-margin           : $fa-li-width * fa-divide(5, 4) !default;
+ *    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   _variables.scss 37:27  @import
+ *   font-awesome.scss 6:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined operation "2em * fa-divide(5, 4)".\a    \2577 \a 37 \2502  $fa-li-margin           : $fa-li-width * fa-divide(5, 4) !default;\a    \2502                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   _variables.scss 37:27  @import\a   font-awesome.scss 6:9  root stylesheet';
+}

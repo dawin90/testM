@@ -1,0 +1,151 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+    <title>StyleBot-Dashboard</title>
+    
+	<!-- Vendors Style-->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.3/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="/uitemplate/eduadmin/css/vendors_css.css">
+
+	  <!-- Style-->
+	  <link rel="stylesheet" type="text/css" href="/uitemplate/eduadmin/css/style.css">
+	  <link rel="stylesheet" type="text/css" href="/uitemplate/eduadmin/css/skin_color.css">
+     
+  </head>
+
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+
+  <header class="main-header">
+	<div class="d-flex align-items-center logo-box justify-content-start">
+		<!-- Logo -->
+		<a href="index.html" class="logo">
+			STYLEBOT
+		</a>
+	</div>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+	  <div class="app-menu">
+		<ul class="header-megamenu nav">
+			<li class="btn-group nav-item d-md-none">
+				<a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu" role="button">
+					<span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+			    </a>
+			</li>
+		</ul>
+	  </div>
+      <div class="navbar-custom-menu r-side">
+        <ul class="nav navbar-nav">
+	      <!-- User Account-->
+          <li class="dropdown user user-menu">
+            <a href="#" class="waves-effect waves-light dropdown-toggle" data-bs-toggle="dropdown" title="User">
+				<i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+            </a>
+            <ul class="dropdown-menu animated flipInX">
+              <li class="user-body">
+				 <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i> Profile</a>
+				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
+				 <div class="dropdown-divider"></div>
+				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Logout</a>
+              </li>
+            </ul>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar position-relative">	
+	  	<div class="multinav">
+		  <div class="multinav-scroll" style="height: 100%;">
+			  <!-- sidebar menu-->
+			  <div class="sidebar-menu" data-widget="tree">
+				<li class="header">Dashboard</li>
+				<li><a href="index.html"><i class="fa fa-home"><span class="path1"></span><span class="path2"></span></i>Overview</a></li>
+			  	<li class="header">JENNIE FIT </li>
+				<li><a href="my-closet-upload.html"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>내 옷 수동 등록</a></li>
+				<li><a href="jennie-cc.html"><i class="fa fa-camera"><span class="path1"></span><span class="path2"></span></i>Jennie C.C</a></li>
+				<li><a href="jennie-fit-assign.html"><i class="fa fa-file-text"><span class="path1"></span><span class="path2"></span></i>작업 현황 및 배정</a></li>
+				<li><a href="jennie-fit-user.html"><i class="fa fa-cloud-upload"><span class="path1"></span><span class="path2"></span></i>Jennie FIT User</a></li>
+				<li><a href="jennie-fit-product.html"><i class="fa fa-cloud-upload"><span class="path1"></span><span class="path2"></span></i>Jennie FIT Product</a></li>
+				<li><a href="jennie-fit-inspection.html"><i class="fa fa-th-list"><span class="path1"></span><span class="path2"></span></i>Jennie FIT 검수</a></li>
+				<li class="header">JENNIE PRODUCT</li>
+				<li><a href="#"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>스타일봇 수동 등록</a></li>
+				<li><a href="jennie-product-total.html"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>전체 상품 리스트</a></li>
+				<li class="header">STYLE</li>
+				<li><a href="jennies-pick.html"><i class="fa fa-meh-o"><span class="path1"></span><span class="path2"></span></i>Jennie's Pick</a></li>
+				<li class="header">검색 키워드</li>
+				<li><a href="#"><i class="fa fa-heart"><span class="path1"></span><span class="path2"></span></i>인기 키워드 리스트</a></li>
+				<li class="header">아바타 커스텀</li>
+				<li><a href="#"><i class="fa fa-magic"><span class="path1"></span><span class="path2"></span></i>아바타 커스텀</a></li>
+				<li class="header">이벤트 관리</li>
+				<li><a href="#"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>팝업 광고 리스트</a></li>
+				<li class="header">브랜드 관리</li>
+				<li><a href="#"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>브랜드 관리</a></li>
+				<li class="header">GENERAL</li>
+				<li><a href="#"><i class="fa fa-user-circle"><span class="path1"></span><span class="path2"></span></i>Account</a></li>
+				<li><a href="#"><i class="fa fa-question-circle-o"><span class="path1"></span><span class="path2"></span></i>Inquiry</a></li>
+				<li><a href="#"><i class="fa fa-question-circle-o"><span class="path1"></span><span class="path2"></span></i>CodeGroup</a></li>
+				<li><a href="#"><i class="fa fa-question-circle-o"><span class="path1"></span><span class="path2"></span></i>Code</a></li>
+				<li class="header">한섬</li>
+				<li><a href="#"><i class="fa fa-file-text-o"><span class="path1"></span><span class="path2"></span></i>한섬 작업 현황 및 배정</a></li>
+				<li><a href="#"><i class="fa fa-cloud-upload"><span class="path1"></span><span class="path2"></span></i>한섬 Jennie FIT Product</a></li>
+				<li><a href="#"><i class="fa fa-th-list"><span class="path1"></span><span class="path2"></span></i>한섬 Jennie FIT 검수</a></li>
+				<li><a href="#"><i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>한섬 전체 상품 리스트</a></li>
+				<li class="header">고객사 관리</li>
+				<li class="treeview">
+				  <a href="#">
+					  <i class="fa fa-archive"><span class="path1"></span><span class="path2"></span></i>
+					  <span>B2B관리</span>
+					  <span class="pull-right-container">
+				  <i class="fa fa-angle-right pull-right"></i>
+				</span>
+				  </a>
+				  <ul class="treeview-menu">
+					  <li><a href="#"><i class="fa fa-pencil"><span class="path1"></span><span class="path2"></span></i>B2B 회사 추가</a></li>
+					  <li><a href="#"><i class="fa fa-pencil"><span class="path1"></span><span class="path2"></span></i>B2B 담당자 계정 추가</a></li>
+				  </ul>
+				</li>
+				<li class="header">B2B PROD.M</li>
+				<li><a href="#"><i class="fa fa-file-text-o"><span class="path1"></span><span class="path2"></span></i>B2B 작업 현황 및 배전</a></li>
+				<li><a href="#"><i class="fa fa-cloud-upload"><span class="path1"></span><span class="path2"></span></i>B2B Jennie FIT Product</a></li>
+				<li><a href="#"><i class="fa fa-th-list"><span class="path1"></span><span class="path2"></span></i>B2B Jennie FIT 검수</a></li>
+		  </div>
+		</div>
+    </section>
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		<section class="content">
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+	<!-- Page Content overlay -->
+	<script type="text/javascript" src="/uitemplate/eduadmin/js/vendors.min.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/js/pages/chat-popup.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/assets/icons/feather-icons/feather.min.js"></script>
+
+	<script type="text/javascript" src="/uitemplate/eduadmin/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/assets/vendor_components/moment/min/moment.min.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/assets/vendor_components/fullcalendar/fullcalendar.js"></script>
+
+	<!-- EduAdmin App -->
+	<script type="text/javascript" src="/uitemplate/eduadmin/js/template.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/js/pages/dashboard.js"></script>
+	<script type="text/javascript" src="/uitemplate/eduadmin/js/pages/calendar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.t3test.core.codegroup.CodeGroupDao">
+    <sql id="deptColumns">
+        codeGroupName,
+        codeGroupNameEng,
+        codeGroupUseNY,
+        codeGroupDelNY,
+    </sql>
+
+    <select id="selectList" resultType="com.example.t3test.core.codegroup.CodeGroup">
+        SELECT codeGroupSeq,
+        <include refid="deptColumns"/>
+        codeGroupRegdate,
+        codeGroupUpdate
+        FROM CodeGroup
+    </select>
+
+    <select id="selectOne" resultType="com.example.t3test.core.codegroup.CodeGroup">
+        SELECT codeGroupSeq,
+        <include refid="deptColumns"/>
+        codeGroupRegdate,
+        codeGroupUpdate
+        FROM CodeGroup
+        WHERE 1=1
+        AND codeGroupSeq = #{codeGroupSeq}
+    </select>
+
+    <insert id="insert" parameterType="com.example.t3test.core.codegroup.CodeGroup">
+        INSERT INTO CodeGroup(
+           <include refid="deptColumns"/>
+        codeGroupRegdate
+        ) VALUES (
+            #{codeGroupName},
+            #{codeGroupNameEng},
+            #{codeGroupUseNY},
+            #{codeGroupDelNY},
+            now()
+        )
+        <selectKey resultType="String" keyProperty="codeGroupSeq" order="AFTER">
+            select last_insert_id()
+        </selectKey>
+    </insert>
+    <update id="update" parameterType="com.example.t3test.core.codegroup.CodeGroup">
+        update CodeGroup
+        SET
+            codeGroupName = #{codeGroupName}
+            ,codeGroupNameEng = #{codeGroupNameEng}
+            ,codeGroupUseNY = #{codeGroupUseNY}
+            ,codeGroupDelNY = #{codeGroupDelNY}
+            ,codeGroupUpdate = now()
+        WHERE
+            codeGroupSeq = #{codeGroupSeq}
+
+    </update>
+
+<!--    <select id="selectBoardDetail" parameterType="Long" resultType="BoardDTO">-->
+<!--        SELECT-->
+<!--        <include refid="boardColumns"/>-->
+<!--        FROM-->
+<!--        tb_board-->
+<!--        WHERE-->
+<!--        delete_yn = 'N'-->
+<!--        AND-->
+<!--        idx = #{idx};-->
+<!--    </select>-->
+
+<!--    <update id="updateBoard" parameterType="BoardDTO">-->
+<!--        UPDATE tb_board-->
+<!--        SET-->
+<!--            update_time = NOW(),-->
+<!--            title = #{title},-->
+<!--            content = #{content},-->
+<!--            writer = #{writer},-->
+<!--            notice_yn = IFNULL(#{noticeYn},'N'),-->
+<!--            secret_yn = IFNULL(#{secretYn},'N')-->
+<!--        WHERE-->
+<!--            idx =#{idx}-->
+<!--    </update>-->
+
+<!--    <update id="deleteBoard">-->
+<!--        UPDATE tb_board-->
+<!--        SET-->
+<!--            delete_yn = 'Y',-->
+<!--            delete_time = NOW()-->
+<!--            WEHRE-->
+<!--            idx = #{idx}-->
+<!--    </update>-->
+
+<!--    <select id="selectBoardList" parameterType="BoardDTO" resultType="BoardDTO">-->
+<!--        SELECT-->
+<!--        <include refid="boardColumns"/>-->
+<!--        FROM-->
+<!--        tb_board-->
+<!--        WEHRE-->
+<!--        delete_yn = 'N'-->
+<!--        ORDER BY-->
+<!--        notice_yn ASC,-->
+<!--        idx DESC,-->
+<!--        insert_time DESC-->
+<!--    </select>-->
+
+<!--    <select id="selectBoardToTalCount" parameterType="BoardDTO" resultType="int">-->
+<!--        SELECT-->
+<!--            COUNT(*)-->
+<!--        FROM-->
+<!--            tb_board-->
+<!--        WHERE-->
+<!--            delete_yn = 'N'-->
+<!--    </select>-->
+</mapper>

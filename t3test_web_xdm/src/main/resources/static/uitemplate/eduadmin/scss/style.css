@@ -1,0 +1,18 @@
+/* Error: expected ")".
+ *     ,
+ * 360 |     background-image: url(../../../../../../../../Downloads/무제 폴더/eduadmin-main-file-v4.1/html/BS5/images/user-info.jpg);
+ *     |                           ^
+ *     '
+ *   _sidebar.scss 360:27  @import
+ *   style.scss 81:9       root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ")".\a     \2577 \a 360 \2502      background-image: url(../../../../../../../../Downloads/\bb34 \c81c  \d3f4 \b354 /eduadmin-main-file-v4.1/html/BS5/images/user-info.jpg);\d\a     \2502                            ^\a     \2575 \a   _sidebar.scss 360:27  @import\a   style.scss 81:9       root stylesheet';
+}
